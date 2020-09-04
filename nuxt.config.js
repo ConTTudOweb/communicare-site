@@ -29,26 +29,45 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
-    // __dangerouslyDisableSanitizers: ['script', 'noscript'],
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { 
+        rel: 'stylesheet', type: 'text/css', href: 'https://use.fontawesome.com/releases/v5.6.3/css/all.css'
+      }
+    ],
+    __dangerouslyDisableSanitizers: ['script', 'noscript'],
     // noscript: [
     //   {
     //     innerHTML: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=689866154919988&ev=PageView&noscript=1" />`,
     //   }
     // ],
-    // script: [
-    //   { // Facebook Pixel Code
-    //     innerHTML: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","689866154919988");fbq("track","PageView");`,
-    //     defer: true,
-    //     async: true,
-    //   },
-    // ]
+    script: [
+      // { // Facebook Pixel Code
+      //   innerHTML: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","689866154919988");fbq("track","PageView");`,
+      //   defer: true,
+      //   async: true,
+      // },
+      { src: 'js/jquery/jquery.js', type: 'text/javascript' },
+      { src: 'js/flexslider-min.js', type: 'text/javascript' },
+      { src: 'js/simple-mask.js', type: 'text/javascript' },
+      { src: 'js/main.js', type: 'text/javascript' },
+      // { src: 'js/get-csrftoken.js', type: 'text/javascript' },
+      // { src: 'js/contact-whatsapp.js', type: 'text/javascript' },
+      { src: 'js/scrollreveal.min.js', type: 'text/javascript' },
+    ]
   },
   /*
   ** Global CSS
   */
   css: [
+    // https://use.fontawesome.com/releases/v5.6.3/css/all.css
+    // '~static/css/fontawesome-all.css',
+    //
+    '~static/css/normalize.css',
+    '~static/css/flexslider.css',
+    '~static/css/plugins/remodal.css',
+    '~static/css/plugins/remodal-default-theme.css',
+    '~assets/scss/main.scss',
+    '~static/css/custom_v2.css'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -61,6 +80,7 @@ export default {
   ** See https://nuxtjs.org/api/configuration-components
   */
   components: true,
+  loading: '~/components/base/Loading.vue',
   /*
   ** Nuxt.js dev-modules
   */
@@ -83,7 +103,10 @@ export default {
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
-  axios: {},
+ axios: {
+  debug: process.env.NUXT_ENV_AXIOS_DEBUG || false,
+  baseURL: process.env.NUXT_ENV_API_URL || 'http://localhost:8000'
+},
   /*
   ** Content module configuration
   ** See https://content.nuxtjs.org/configuration

@@ -1,0 +1,66 @@
+/* Details header */
+
+.header-treinamento-oratoria {
+    background: url("/images/banner/treinamento_oratoria_header.jpg") no-repeat !important;
+}
+
+.header-curso-hipnose {
+    background: url("/images/banner/curso_hipnose_header.jpg") no-repeat !important;
+}
+
+.header-treinamento-inteligencia-emocional {
+    background: url("/images/banner/treinamento_inteligencia_emocional_header.jpg") no-repeat !important;
+}
+
+.header-atendimento-coaching {
+    background: url("/images/banner/atendimento_coaching_header.jpg") no-repeat !important;
+}
+
+.header-atendimento-hipnoterapia {
+    background: url("/images/banner/atendimento_hipnoterapia_header.jpg") no-repeat !important;
+}
+
+header li span {
+    cursor: pointer !important;
+}
+
+/* --- */
+
+.iframe-container{
+    margin: 0 auto;
+    max-width:100%;
+    width:500px;
+    height:300px;
+}
+@media only screen and (max-width: 992px) {
+    .iframe-container{
+        width: 80%;
+        height:400px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .iframe-container{
+        width: 100%;
+        height:500px;
+    }
+}
+
+/* --- */
+.icon-list {
+    list-style: none;
+    display: list-item !important;
+}
+.icon-list::before{
+    padding-right: 10px;
+    font-family: "FontAwesome";
+    content: "\f00c";
+    color: #bc2b33;
+    font-size: 1.5rem;
+;
+}
+
+/* --- */
+.motivations ol>li {
+    display: list-item;
+    list-style-type: decimal-leading-zero;
+}

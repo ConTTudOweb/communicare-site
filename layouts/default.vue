@@ -1,11 +1,14 @@
 <template>
   <div>
+    <Header />
     <Nuxt />
+    <Whatsapp />
+    <Footer />
   </div>
 </template>
 
 <style>
-html {
+/* html {
   font-family:
     'Source Sans Pro',
     -apple-system,
@@ -58,5 +61,5 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
-}
+} */
 </style>
