@@ -2,18 +2,18 @@
     <header>
         <div class="holder">
             <h1 class="logo">
-                <a href="#inicio">
+                <nuxt-link to="/#inicio">
                     <img src="/images/logo.png">
-                </a>
+                </nuxt-link>
             </h1>
             <nav>
                 <ul>
-                    <li><a href="#cursos-e-treinamentos">CURSOS E TREINAMENTOS</a></li>
-                    <li><a href="#">HIPNOTERAPIA</a></li>
-                    <li><a href="#agenda">AGENDA</a></li>
-                    <li><a href="#depoimentos">DEPOIMENTOS</a></li>
-                    <li><a href="#quem-somos">QUEM SOMOS</a></li>
-                    <li><a href="#contato">CONTATO</a></li>
+                    <li><nuxt-link to="/#cursos-e-treinamentos">CURSOS E TREINAMENTOS</nuxt-link></li>
+                    <li><nuxt-link to="/atendimento-hipnoterapia">HIPNOTERAPIA</nuxt-link></li>
+                    <li><nuxt-link to="/#agenda">AGENDA</nuxt-link></li>
+                    <li><nuxt-link to="/#depoimentos">DEPOIMENTOS</nuxt-link></li>
+                    <li><nuxt-link to="/#quem-somos">QUEM SOMOS</nuxt-link></li>
+                    <li><nuxt-link to="/#contato">CONTATO</nuxt-link></li>
                 </ul>
             </nav>
             <a class="menu-trigger">Menu</a>
