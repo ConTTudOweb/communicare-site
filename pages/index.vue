@@ -59,6 +59,7 @@
         <div class="holder">
 
             <h2>Veja o que estão falando da gente!</h2>
+            <!-- <div v-text="testimonials"> -->
 
             <Depoimentos :testimonials="testimonials" />
 
@@ -250,15 +251,24 @@ import redesSociais from '~/mixins/redesSociais'
 export default {
   mixins: [redesSociais],
   
-  async fetch() {
-    this.events = await this.$axios.$get('/api/events')
-    this.testimonials = await this.$axios.$get('/api/testimonials')
+//   async fetch() {
+//     // this.events = await this.$axios.$get('/api/events')
+//     this.testimonials = await this.$axios.$get('/api/testimonials')
+//   },
+
+  async asyncData({ $axios }) {
+      const events = await $axios.$get('/api/events')
+    //   const testimonials = await $axios.$get('/api/testimonials')
+      return {
+          events,
+        //   testimonials
+      }
   },
   
   data() {
     return {
-      events: [],
-      testimonials: [],
+    //   events: [],
+      testimonials: [ { "customer": "Alessandro de Lima Folk", "description": "Ação! aaa...\r\n\r\n123.", "image": "https://res.cloudinary.com/hdyr2ase4/image/upload/v1599224891/kiojiwffdj36ymsn4v2d.jpg" }, { "customer": "Alessandro de Lima Folk", "description": "uhulllllllllllllll", "image": "https://res.cloudinary.com/hdyr2ase4/image/upload/v1599226324/cmkjl2lognn5qedtebee.jpg" } ],
       contact_form: {},
       contactFormResult: '',
       contactFormErros: '',

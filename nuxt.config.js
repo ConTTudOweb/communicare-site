@@ -14,6 +14,9 @@ export default {
   ** Headers of the page
   ** See https://nuxtjs.org/api/configuration-head
   */
+  generate: {
+    fallback: true
+  },
   head: {
     htmlAttrs: {
       lang: 'pt-br'
@@ -46,13 +49,34 @@ export default {
       //   defer: true,
       //   async: true,
       // },
-      { src: 'js/jquery/jquery.js', type: 'text/javascript' },
-      { src: 'js/flexslider-min.js', type: 'text/javascript' },
-      { src: 'js/simple-mask.js', type: 'text/javascript' },
-      { src: 'js/main.js', type: 'text/javascript' },
+      { 
+        src: 'js/jquery/jquery.js',
+        type: 'text/javascript' 
+      },
+      { 
+        defer: true,
+        async: true,
+        src: 'js/flexslider-min.js', 
+        type: 'text/javascript' 
+      },
+      { 
+        defer: true,
+        async: true,
+        src: 'js/simple-mask.js', 
+        type: 'text/javascript' 
+      },
+      { 
+        defer: true,
+        async: true,
+        src: 'js/main.js', 
+        type: 'text/javascript' 
+      },
       // { src: 'js/get-csrftoken.js', type: 'text/javascript' },
       // { src: 'js/contact-whatsapp.js', type: 'text/javascript' },
-      { src: 'js/scrollreveal.min.js', type: 'text/javascript' },
+      { 
+        src: 'js/scrollreveal.min.js', 
+        type: 'text/javascript' 
+      }
     ]
   },
   /*
@@ -73,8 +97,7 @@ export default {
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
   */
-  plugins: [
-  ],
+  plugins: ['plugins/preview.client.js'],
   /*
   ** Auto import components
   ** See https://nuxtjs.org/api/configuration-components
