@@ -37,7 +37,7 @@ export default {
         rel: 'stylesheet', type: 'text/css', href: 'https://use.fontawesome.com/releases/v5.6.3/css/all.css'
       }
     ],
-    __dangerouslyDisableSanitizers: ['script', 'noscript'],
+    // __dangerouslyDisableSanitizers: ['script', 'noscript'],
     // noscript: [
     //   {
     //     innerHTML: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=689866154919988&ev=PageView&noscript=1" />`,
@@ -66,8 +66,6 @@ export default {
         type: 'text/javascript' 
       },
       { 
-        defer: true,
-        async: true,
         src: 'js/main.js', 
         type: 'text/javascript' 
       },
