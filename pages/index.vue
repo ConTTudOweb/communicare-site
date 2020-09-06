@@ -246,9 +246,10 @@
 
 <script>
 import redesSociais from '~/mixins/redesSociais'
+import flexslider from '~/mixins/flexslider'
 
 export default {
-  mixins: [redesSociais],
+  mixins: [redesSociais, flexslider],
   
   async fetch() {
     this.events = await this.$axios.$get('/api/events')

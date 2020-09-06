@@ -1,6 +1,7 @@
 Main = {
   init: function(){
 
+    console.log('init...')
 
     // Mobile menu
 
@@ -34,13 +35,13 @@ Main = {
 
     // FlexSlider
 
-    $('.flexslider').flexslider({
-      randomize: true,
-      startAt: 0,
-      slideshow: true,
-      initDelay: 0,
-      touch: true
-    });
+    // $('.flexslider').flexslider({
+    //   randomize: true,
+    //   startAt: 0,
+    //   slideshow: true,
+    //   initDelay: 0,
+    //   touch: true
+    // });
 
 
     // Remodal auto load

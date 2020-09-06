@@ -174,7 +174,11 @@
 </template>
 
 <script>
+import flexslider from '~/mixins/flexslider'
+
 export default {
+    mixins: [flexslider],
+
     async fetch() {
         this.testimonials = await this.$axios.$get('/api/testimonials-hipnoterapia')
     },

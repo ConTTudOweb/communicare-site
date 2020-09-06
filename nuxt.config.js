@@ -49,32 +49,30 @@ export default {
       //   defer: true,
       //   async: true,
       // },
-      { 
-        src: 'js/jquery/jquery.js',
-        type: 'text/javascript' 
-      },
+      // { 
+      //   defer: true,
+      //   src: '/js/jquery/jquery.js',
+      //   type: 'text/javascript' 
+      // },
+      // { 
+      //   defer: true,
+      //   src: '/js/flexslider-min.js', 
+      //   type: 'text/javascript' 
+      // },
+      // { 
+      //   defer: true,
+      //   src: '/js/simple-mask.js', 
+      //   type: 'text/javascript' 
+      // },
       { 
         defer: true,
-        async: true,
-        src: 'js/flexslider-min.js', 
+        src: '/js/main.js', 
         type: 'text/javascript' 
       },
-      { 
-        defer: true,
-        async: true,
-        src: 'js/simple-mask.js', 
-        type: 'text/javascript' 
-      },
-      { 
-        src: 'js/main.js', 
-        type: 'text/javascript' 
-      },
-      // { src: 'js/get-csrftoken.js', type: 'text/javascript' },
-      // { src: 'js/contact-whatsapp.js', type: 'text/javascript' },
-      { 
-        src: 'js/scrollreveal.min.js', 
-        type: 'text/javascript' 
-      }
+      // { 
+      //   src: '/js/scrollreveal.min.js', 
+      //   type: 'text/javascript' 
+      // }
     ]
   },
   /*
